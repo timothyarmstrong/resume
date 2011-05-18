@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timothy Armstrong's R&eacute;sum&eacute;</title>
+        
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <style>
+        
+        /* RESET */
+        
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        
+        .page {
+            
+        }
+        
+        .page ol, .page ul {
+            list-style: none;
+        }
+        
+        .page h1, .page h2, .page h3, .page ul,
+        .page li, .page hgroup, .page section {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        /* STYLING */
+        
+        body {
+            padding:25px;
+            background:#ddd;
+        }
+        
+        .page a {
+            color:black;
+            text-decoration:none;
+        }
+        
+        .page a:hover {
+            text-decoration:underline;
+        }
+        
+        .page {
+            font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+            font-size:12px;
+            line-height:20px;
+            position: relative;
+            width: 700px;
+            padding: 50px;
+            margin: 0 auto 30px;
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page:before, .page:after {
+            position: absolute;
+            width: 40%;
+            height: 10px;
+            content: ' ';
+            left: 12px;
+            bottom: 12px;
+            background: transparent;
+            -webkit-transform: skew(-5deg) rotate(-5deg);
+            -moz-transform: skew(-5deg) rotate(-5deg);
+            -ms-transform: skew(-5deg) rotate(-5deg);
+            -o-transform: skew(-5deg) rotate(-5deg);
+            transform: skew(-5deg) rotate(-5deg);
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+        
+        .page:after {
+            left: auto;
+            right: 12px;
+            -webkit-transform: skew(5deg) rotate(5deg);
+            -moz-transform: skew(5deg) rotate(5deg);
+            -ms-transform: skew(5deg) rotate(5deg);
+            -o-transform: skew(5deg) rotate(5deg);
+            transform: skew(5deg) rotate(5deg);
+        }
+        
+        /* OVERRIDE THE STYLES FOR PRINTING */
+        @media print {
+            
+            body {
+                background:white;
+                padding:0;
+            }
+            
+            .page {
+                page-break-after:always;
+                width:auto;
+                padding:0;
+                margin:0;
+                -webkit-box-shadow:none;
+                -moz-box-shadow:none;
+                box-shadow:none;
+            }
+            
+            .page:after, .page:before {
+                content:normal;
+                position:static;
+                display:inline;
+            }
+            
+        }
+        
+        .page .my_address {
+            text-align:right;
+        }
+        
+        .page p {
+            text-indent:30px;
+        }
+        
+        .page p.noindent {
+            text-indent:0;
+        }
+        
+        .page header hgroup {
+            text-align:center;
+            border-bottom:1px solid black;
+            padding-bottom:10px;
+        }
+        
+        .page h1 {
+            font-size:25px;
+            font-weight:bold;
+            text-shadow:transparent 0 0 1px;
+            margin-bottom:10px;
+        }
+        
+        .page hgroup h2 {
+            font-size:15px;
+            font-weight:bold;
+        }
+        
+        .page section {
+            padding:15px 0 0px 20px;
+        }
+        
+        .page section h2 {
+            font-size:20px;
+            font-weight:bold;
+            font-variant:small-caps;
+            margin-left:-20px;
+            border-bottom:1px dotted black;
+            padding-bottom:2px;
+            margin-bottom:5px;
+        }
+        
+        .page section .item {
+            padding-bottom:30px;
+        }
+        
+        .page section .item:last-child {
+            padding-bottom:0px;
+        }
+        
+        .page section hgroup {
+            margin-bottom:5px;
+        }
+        
+        .page section hgroup:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        
+        .page section hgroup div.primary {
+            float:left;
+        }
+        
+        .page section hgroup div.secondary {
+            float:right;
+            text-align:right;
+        }
+        
+        .page section hgroup h3 {
+            font-weight:bold;
+        }
+        
+        .page section hgroup h3 + h3 {
+            font-weight:normal;
+            font-style:italic;
+        }
+        
+        .page ul {
+            clear:both;
+            padding-left:20px;
+        }
+        
+        .page ul li {
+            list-style:disc;
+        }
+        
+        .page ul li ul li {
+            list-style:circle;
+        }
+        
+        </style>
+    </head>
+    <body>
+        
+        <!--
+        <div class="page">
+            
+            <div class="my_address">
+                Timothy Armstrong<br />
+                100 Chieftain Crescent<br />
+                Barrie, Ontario<br />
+                L4N 6J3 Canada<br />
+            </div>
+            
+            <div class="recipient_address">
+                
+            </div>
+            
+            <p class="noindent">May 17th, 2011</p>
+            
+            <p class="noindent">Dear Recruiter:</p>
+            
+            
+            
+            <p class="noindent">Regards,</p>
+            
+            <p class="noindent">Timothy Armstrong</p>
+    
+        </div>
+        -->
+        
+        <div class="page">
+            
+            <header>
+                
+                <hgroup>
+                    <h1>Timothy Armstrong</h1>
+                    <h2>2B Software Engineering</h2>
+                    <h2>
+                        <a href="mailto:armstrong.timothy@gmail.com">armstrong.timothy@gmail.com</a> &bull;
+                        226-789-3431
+                    </h2>
+                    <h2>
+                        <a href="http://timothy-armstrong.com">timothy-armstrong.com</a> &bull;
+                        <a href="http://github.com/timothyarmstrong">github.com/timothyarmstrong</a>
+                    </h2>
+                </hgroup>
+                
+            </header>
+            
+            <section id="skills">
+                
+                <h2>Skills Summary</h2>
+                
+                <ul>
+                    <li>Strong technical skills, developed through two work terms at a start-up company creating and maintaining a mobile web application.</li>
+                    <li>Terrific initiative, developed through years of learning about new technologies and building personal projects to improve technical skills.</li>
+                    <li>Great interpersonal skills, developed through four years working in a customer service position.</li>
+                    <li>Expert leadership skills, developed through two years planning and making decisions on the executive level of high school student council.</li>
+                    <li>Independent worker, excellent at following instructions and working without supervision, developed through both academic and workplace experience.</li>
+                </ul>
+                
+            </section>
+            
+            <section id="core_technical_skills">
+                
+                <h2>Core Technical Skills</h2>
+                
+                <ul>
+                    
+                    <li>Web Technologies:
+                        <ul>
+                            <li>JavaScript &mdash; Proficient with jQuery, Prototype, Backbone.js, and other libraries. Familiar with multiple approaches to optimize performance of large applications. Experienced in debugging with Firebug and WebKit Web Inspector.</li>
+                            <li>PHP5 &mdash; Experience with MVC frameworks, particularly CodeIgniter and CakePHP.</li>
+                            <li>HTML5 &mdash; Have previously built web applications using canvas, geolocation, local storage, caching, and video.</li>
+                            <li>CSS3 &mdash; Proficient with recreating any design using CSS. In-depth experience designing for desktop and mobile WebKit browsers using the newest features of CSS.</li>
+                            <li>MySQL &mdash; Strong understanding of building data-driven applications while protecting against SQL injection attacks.</li>
+                        </ul>
+                    </li>
+                    <li>Programming Languages: C, C++; working knowledge of Lisp, MIPS Assembly, Objective-C, Java, and Python.</li>
+                    <li>Operating Systems: Microsoft Windows; working knowledge of Ubuntu Linux and Mac OS X.</li>
+                    <li>Application Software: Proficient with Microsoft Office Suite; working knowledge of Eclipse and Adobe Suite</li>
+                    <li>Project Management: Agile development using PivotalTracker; Basecamp.</li>
+                    <li>Version Control: SVN; working knowledge of Git.</li>
+                    
+                </ul>
+                
+            </section>
+            
+            <section id="technical_experience">
+                
+                <h2>Technical Work Experience</h2>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                        
+                        <div class="primary">
+                            <h3>5Touch Solutions Inc.</h3>
+                            <h3>Web and Mobile Application Developer</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Toronto, Ontario</h3>
+                            <h3>January 2011 &ndash; April 2011</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Responsible for monitoring performance, maintaining, and adding features to the company's mobile web application which received tens of thousands of pageviews every week.</li>
+                        <li>Created a new version of the mobile web application for iOS and Android mobile browsers, utilizing new features in HTML5, CSS3, and JavaScript.</li>
+                        <li>Designed and implemented a gaming layer on top of the existing application allowing users to check-in to exhibitor locations at tradeshows and compete for points by answering questions.</li>
+                        <li>Built a REST API for the company's internal data system as well as a JavaScript plugin which uses this API so that clients can integrate data stored on the company's website with their own website.</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                        
+                        <div class="primary">
+                            <h3>5Touch Solutions Inc.</h3>
+                            <h3>Web and Mobile Application Developer</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Toronto, Ontario</h3>
+                            <h3>May 2010 &ndash; August 2010</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Created company's scalable and dynamic mobile web application based on an original proof-of-concept version.</li>
+                        <li>Responsible for coordinating testing of the mobile web application across many mobile devices.</li>
+                        <li>Built a content management system which allowed for easy entry of data by clients for use in the mobile web application.</li>
+                        <li>Created a live feedback system for the mobile web application which allowed users to answer questions with the results graphed live using the Google Charts API.</li>
+                        <li>Integrated content manager with Facebook and Twitter.</li>
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <section id="education">
+                
+                <h2>Education</h2>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                        
+                        <div class="primary">
+                            <h3>University of Waterloo</h3>
+                            <h3>Candidate for Bachelor of Software Engineering</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Waterloo, Ontario</h3>
+                            <h3>September 2009 &ndash; present</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Relevant Assignments:
+                            <ul>
+                                <li>Created a compiler for a subset of the C language. Implemented a scanner, lexer, parser, linker, and assembler in C and Java which generated MIPS assembly from original source code.</li>
+                                <li>Developed a calculator using Coldfire assembly which interfaced with serial and parallel hardware connected to the Coldfire board for input and output.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                    
+                        <div class="primary">
+                            <h3>St. Peter's Secondary School</h3>
+                            <h3>Ontario High School Diploma</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Barrie, Ontario</h3>
+                            <h3>June 2009</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Awards:
+                            <ul>
+                                <li>Governor General's Award &mdash; Awarded for achieving highest overall average in Grade 11 and Grade 12 courses.</li>
+                                <li>Academic Achievement in Math &mdash; Awarded for achieving the highest mark in Grade 12 Academic math courses.</li>
+                                <li>Technology Award &mdash; Awarded for proficiency with technology and for responsibility of all technical equipment at school events.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <!-- I'm removing this section just because the resume is too long when including it.
+            
+            <section id="other_experience">
+                
+                <h2>Other Work Experience</h2>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                        
+                        <div class="primary">
+                            <h3>Pizza Hut</h3>
+                            <h3>Customer Service Representative</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Barrie, Ontario</h3>
+                            <h3>May 2006 &ndash; August 2009</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Interacted with customers, worked collaboratively with other employees to ensure efficiency</li>
+                        <li>Interacted with customers to take orders efficiently</li>
+                        <li>Worked with other employees to ensure problems were avoided</li>
+                        <li>Maintained cleanliness of facility</li>
+                        <li>Troubleshot technical problems with the computer systems, regularly analyzing order-taking system for bugs</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    
+                    <hgroup class="titles">
+                        
+                        <div class="primary">
+                            <h3>St. Peter's Secondary School</h3>
+                            <h3>Head of Tech Crew</h3>
+                        </div>
+                        
+                        <div class="secondary">
+                            <h3>Barrie, Ontario</h3>
+                            <h3>September 2007 &ndash; June 2009</h3>
+                        </div>
+                        
+                    </hgroup>
+                    
+                    <ul>
+                        <li>Attended most special events to run technical equipment (including sound systems, projectors, lighting systems)</li>
+                        <li>Facilitated training sessions to teach others how to properly use various software programs</li>
+                        <li>Appointed to the executive level of student council to use technical expertise in organizing and planning school events</li>
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            -->
+            
+            <section id="activities_and_interests">
+                
+                <h2>Activities and Interest</h2>
+                
+                <ul>
+                    <li>Regular participant in web programming contests:
+                        <ul>
+                            <li>Created a game entered in An Event Apart's 10K Challenge, rated 4.36 / 5 by users</li>
+                        </ul>
+                    </li>
+                    <li>Participant in academic contests:
+                        <ul>
+                            <li>University of Waterloo Math Contests in 2007 &ndash; 2009, placing first in the school on one occasion and in the top 25% of all participants on two occasions</li>
+                            <li>Sir Isaac Newton Physics Contest, placing in top 25% of all participants</li>
+                            <li>University of Toronto Computer Science Competition, placing as runner-up, April 2008</li>
+                        </ul>
+                    </li>
+                    <li>Frequently hack on open-source projects</li>
+                    <li>Selected to attend Youth Leadership Camps Canada, September 2008</li>
+                    <li>Enjoy curling, computer gaming</li>
+                </ul>
+                
+            </section>
+            
+        </div>
+        
+    </body>
+</html>
